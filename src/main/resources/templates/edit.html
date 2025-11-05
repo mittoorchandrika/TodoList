@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Todo</title>
+</head>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#f3f3f3;">
+
+<div style="background:white; padding:22px; border-radius:12px; width:300px; text-align:center; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+    <h2>Edit Task</h2>
+
+    <form th:action="@{'/update/' + ${todo.id}}" method="post">
+        <input type="text" name="title" th:value="${todo.title}" required style="padding:8px; width:100%; border-radius:6px; border:1px solid #bbb;">
+        <br><br>
+        <button style="padding:8px 15px; background:#28a745; color:white; border:none; border-radius:6px; cursor:pointer;">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
